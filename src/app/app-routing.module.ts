@@ -3,9 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('src/app/pages/Home/home.module').then(m => m.HomeModule)
+  },
+  {
     path: 'avisos',
-    pathMatch: 'full',
-    loadChildren: () => import('src/app/pages/avisos/avisos.module').then(m => m.AvisosModule)
+    loadChildren: () => import('src/app/pages/Avisos/avisos.module').then(m => m.AvisosModule)
   },
   {
     path: '**',
