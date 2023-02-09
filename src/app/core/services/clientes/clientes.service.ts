@@ -1,6 +1,6 @@
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { IClientes } from './clientes.model';
+import { IClientes } from './models/clientes.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
