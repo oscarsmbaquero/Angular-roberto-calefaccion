@@ -1,1 +1,31 @@
-<p>header works!</p>
+<div class="header">
+  <img
+    src="../../../../assets/images/logo.png"
+    alt="logo"
+    class="header__photo"
+  />
+  <a
+    class="header__a"
+    [routerLink]="['/avisos']"
+    [ngClass]="{
+      'link--active': selectedRoute === 'avisos'
+    }"
+    >Avisos
+  </a>
+  <a
+    class="header__a"
+    [routerLink]="['/material']"
+    [ngClass]="{
+      'link--active': selectedRoute === 'material'
+    }"
+    >Material
+  </a>
+  <a
+    class="header__a"
+    [routerLink]="['/clientes']"
+    [ngClass]="{
+      'link--active': selectedRoute === ''
+    }"
+    >Clientes
+  </a>
+</div>
