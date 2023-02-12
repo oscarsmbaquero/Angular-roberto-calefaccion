@@ -1,8 +1,26 @@
-<div *ngIf="aviso">
-   <div *ngFor="let item of aviso">
-    <h1>{{item.averia}}</h1>
-   <p>{{item.estado}}</p> 
-   </div> <!-- <p>{{aviso.descripcion}}</p> -->
-
-
-</div>
+<div *ngIf="avisos">
+   <table style="margin:30px ">
+    <thead>
+     <tr>
+       <td>Averia</td>
+       <td>Cobrado</td>
+       <td>Cliente</td>
+       <td>Acciones</td>
+       
+     </tr>
+    </thead>
+     <tbody>
+       <tr *ngFor="let aviso of avisos">
+         <td>{{ aviso.averia }}</td>
+         <td>{{ aviso.cobrado }}</td>
+         <td>{{ aviso.cliente.nombre }}</td>
+         <td>
+           <button>Intervencion</button>
+           <button>Consultar</button>
+           <button>Editar</button>
+         </td>
+         
+       </tr>
+     </tbody>
+   </table>
+ </div>

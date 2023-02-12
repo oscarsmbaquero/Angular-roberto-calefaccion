@@ -10,7 +10,7 @@ import { IAvisos } from 'src/app/core/services/avisos/models/avisos.models';
 })
 export class AvisosComponent implements OnInit {
 
-  public aviso?: IAvisos[];
+  public avisos?: IAvisos[];
 
   constructor(private avisosService: AvisosService) { }
 
@@ -20,8 +20,8 @@ export class AvisosComponent implements OnInit {
 
   private getAvisos() {
     this.avisosService.getAvisos().subscribe((aviso) => {
-      this.aviso = aviso;
-      console.log(aviso)
+      this.avisos = aviso;
+      console.log(this.avisos)
       //this.filteredProducts = products;
     });
   }
