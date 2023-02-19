@@ -1,4 +1,4 @@
-import { UiMaterialModule } from './ui-material.module';
+
 import { MaterialModule } from './pages/Material/material.module';
 
 import { HomeModule } from './pages/Home/home.module';
@@ -23,7 +23,6 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     CoreModule,
     HomeModule,
-    UiMaterialModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
